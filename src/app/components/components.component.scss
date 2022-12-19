@@ -3,7 +3,7 @@
     height: 100vh;
     width: 100vw;
     object-fit: cover;
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     top: 0;
@@ -22,6 +22,7 @@
     font-weight: 700;
     font-size: 2.5rem;
     padding-bottom: 20px;
+    position: relative;
   }
   
   /* page content */

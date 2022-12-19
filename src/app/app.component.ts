@@ -27,7 +27,7 @@ export class AppComponent {
         if (window.outerWidth > 991) {
             window.document.children[0].scrollTop = 0;
         }else{
-            // window.document.activeElement.scrollTop = 0;
+            window.scroll(0, 0);
         }
         this.navbar.sidebarClose();
     });
@@ -49,15 +49,5 @@ export class AppComponent {
         var version = parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
     }
 
-}
-removeFooter() {
-    var titlee = this.location.prepareExternalUrl(this.location.path());
-    titlee = titlee.slice( 1 );
-    if(titlee === 'signup' || titlee === 'nucleoicons'){
-        return false;
-    }
-    else {
-        return true;
-    }
 }
 }

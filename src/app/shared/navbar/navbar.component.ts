@@ -47,28 +47,4 @@ sidebarToggle() {
       this.sidebarClose();
   }
 };
-isHome() {
-var titlee = this.location.prepareExternalUrl(this.location.path());
-if(titlee.charAt(0) === '#'){
-    titlee = titlee.slice( 1 );
-}
-  if( titlee === '/home' ) {
-      return true;
-  }
-  else {
-      return false;
-  }
-}
-isDocumentation() {
-var titlee = this.location.prepareExternalUrl(this.location.path());
-if(titlee.charAt(0) === '#'){
-    titlee = titlee.slice( 1 );
-}
-  if( titlee === '/documentation' ) {
-      return true;
-  }
-  else {
-      return false;
-  }
-}
 }
