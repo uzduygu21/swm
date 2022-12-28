@@ -11,6 +11,11 @@
     z-index: -1;
   }
 
+  .header-inside-image {
+    border-left: 4px solid #fff; 
+    padding-left: 35px;
+  }
+
   .header-push {
     visibility: hidden;
     min-height: 5rem;

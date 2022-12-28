@@ -1,44 +1,70 @@
 <div class="wrapper">
-  <div class="page-header section-dark">
-<video id="background-video" playsinline loop autoplay
-[muted]="true" poster="assets/img/nyc-photo.jpg">
-  <source src="assets/img/nyc-video.mp4" type="video/mp4">
-</video>
+  <div [hidden]="!desktopOrMobile" class="page-header section-dark">
+    <video
+      id="background-video"
+      playsinline
+      loop
+      autoplay
+      [muted]="true"
+      poster="assets/img/nyc-photo.jpg"
+    >
+      <source src="assets/img/nyc-video.mp4" type="video/mp4" />
+    </video>
     <div class="filter"></div>
     <div class="content-center">
       <div class="container-fluid">
-
         <div class="row">
-          <div style="border-left:4px solid #fff;padding-left:35px;">
+          <div class="header-inside-image">
+            <h1 id="main-heading">
+              Financial Planning for the Busy Professional
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    [hidden]="desktopOrMobile"
+    class="page-header bg-image img-fluid"
+    data-parallax="true"
+    style="background-image: url('./assets/img/nyc-photo.jpg')"
+  >
+    <div class="filter"></div>
+
+    <div class="content-center">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="header-inside-image">
             <h1 id="main-heading">Financial Planning for the Busy Professional</h1>
           </div>
-      </div>
+        </div>
       </div>
     </div>
   </div>
   <div class="main">
-    <div class="section"> 
+    <div class="section">
       <div class="container">
         <div class="row">
           <div class="text-center font-weight-light">
             <h1 id="intro">Introduction</h1>
             <p class="intro-prg">
-                Thank you for taking the time to browse our website. The goal of this site is to tell you more about who
-                we are,
-                what we do and find areas of shared values.
+              Thank you for taking the time to browse our website. The goal of
+              this site is to tell you more about who we are, what we do and
+              find areas of shared values.
             </p>
             <p class="intro-prg">
-                Wealth Management was built around the idea that business, finances and personal life all tend to
-                blend
-                together.&nbsp; The name itself comes from the idea of incorporating all of these things.&nbsp; Our lead
-                advisor, has a multi-cultural family and wanted a name to reflect that.&nbsp; Creating a business that was rooted in serving client's wealth was a fundamental
-                principal and
-                something we strive for every day.
+              Wealth Management was built around the idea that business,
+              finances and personal life all tend to blend together.&nbsp; The
+              name itself comes from the idea of incorporating all of these
+              things.&nbsp; Our lead advisor, has a multi-cultural family and
+              wanted a name to reflect that.&nbsp; Creating a business that was
+              rooted in serving client's wealth was a fundamental principal and
+              something we strive for every day.
             </p>
-        </div>
+          </div>
         </div>
         <br />
       </div>
-    </div> 
+    </div>
   </div>
 </div>

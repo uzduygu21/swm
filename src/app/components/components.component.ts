@@ -11,6 +11,7 @@ export class ComponentsComponent implements OnInit{
   focus: any;
   focus1: any;
   focus2: any;
+  desktopOrMobile: any;
   date!: { year: number; month: number; };
   constructor( private renderer : Renderer2) {}
 
@@ -24,6 +25,11 @@ export class ComponentsComponent implements OnInit{
           input_group[i].children[0].addEventListener('blur', function (){
               input_group[i].classList.remove('input-group-focus');
           });
+      }
+
+      console.log("window.innerWidth", window.innerWidth)
+      if(window.innerWidth > 600) {
+        this.desktopOrMobile = true;
       }
   }
 }
