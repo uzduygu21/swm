@@ -23,28 +23,35 @@
           <h2 class="title">THE TYPE OF CLIENTS WE SERVE</h2>
         </div>
       </div>
-      <nav id="navbar-example2" class="navbar navbar-light bg-light">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" (click)="inView(item1)">The Experienced Corporate Executive</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" (click)="inView(item2)">Millennials who are Highly Compensated</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" (click)="inView(item3)">Business Owners</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" (click)="inView(item4)">Inherited Wealth</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="row">
+        <div class="col-md-4 col-12 nav-design">
+          <a class="nav-link nav-design" (click)="inView(item1)">
+            <strong>The Experienced Corporate Executive</strong>
+          </a>
+        </div>
+        <div class="col-md-4 col-12 nav-design">
+          <a class="nav-link nav-design" (click)="inView(item2)">
+            <strong>Millennials who are Highly Compensated</strong>
+          </a>
+        </div>
+        <div class="col-md-2 col-12 nav-design">
+          <a class="nav-link nav-design" (click)="inView(item3)">
+            <strong>Business Owners</strong>
+          </a>
+        </div>
+        <div class="col-md-2 col-12 nav-design">
+          <a class="nav-link nav-design" (click)="inView(item4)">
+            <strong>Inherited Wealth</strong>
+          </a>
+        </div>
+      </div>
 
       <br /><br />
+
       <div #item1 style="background-color: #faf9f6; padding: 20px">
-        <div  class="row">
+        <div class="row">
           <div class="col-sm-6" style="color: #212121">
-            <h4  style="margin-top: 0 !important">
+            <h4 style="margin-top: 0 !important">
               The Experienced Corporate Executive
             </h4>
             <hr />
@@ -76,20 +83,21 @@
             </p>
             <p>
               <span>How we work together:</span>
-              We work to benefit clients like John and Amanda through our platinum
-              level service. We begin with a robust review of their benefits
-              package, after which we identify and outline the most efficient ways
-              to think about investments from both a tax and risk perspective.
-              Using our gathered data, we build an individualized income-based
-              model, utilizing various cash flow strategies to minimize both risks
-              and taxes. This tailor-made financial plan is finalized and then
-              displayed within a simplified roadmap, removing all the complexity
-              from their financial concerns, allowing them to enjoy retirement
-              with a peace of mind.
+              We work to benefit clients like John and Amanda through our
+              platinum level service. We begin with a robust review of their
+              benefits package, after which we identify and outline the most
+              efficient ways to think about investments from both a tax and risk
+              perspective. Using our gathered data, we build an individualized
+              income-based model, utilizing various cash flow strategies to
+              minimize both risks and taxes. This tailor-made financial plan is
+              finalized and then displayed within a simplified roadmap, removing
+              all the complexity from their financial concerns, allowing them to
+              enjoy retirement with a peace of mind.
             </p>
           </div>
           <div class="col-sm-6">
-            <img style="margin: 30% 0;"
+            <img
+              style="margin: 30% 0"
               class="img-thumbnail"
               src="./assets/img/fabio-mangione.jpg"
               alt=""
@@ -101,14 +109,15 @@
       <div #item2 style="background-color: #faf9f6; padding: 20px">
         <div class="row">
           <div class="col-sm-6">
-            <img style="margin: 30% 0;"
+            <img
+              style="margin: 30% 0"
               class="img-thumbnail"
               src="./assets/img/federico-beccari.jpg"
               alt=""
             />
           </div>
           <div class="col-sm-6" style="color: #212121">
-            <h4  style="margin-top: 0 !important">
+            <h4 style="margin-top: 0 !important">
               Millennials who are Highly Compensated
             </h4>
             <hr />
@@ -136,15 +145,15 @@
             <p>
               <span>How we work together:</span>
               We work with clients like Jackson and Renee through our gold level
-              service. We start with a thorough explanation of corporate benefits
-              to ensure our clients’ maximum utilization of their company’s
-              offerings and capitalize on all their hard work. We then
+              service. We start with a thorough explanation of corporate
+              benefits to ensure our clients’ maximum utilization of their
+              company’s offerings and capitalize on all their hard work. We then
               custom-build a financial plan focused on educating and aligning a
               roadmap with their specific goals, highlighting targets and
               expectations for each step of the process. Finally, we ensure this
-              strategy is characteristically flexible and alterable, and allowing
-              for change. This strategic decision reflects our acknowledgement and
-              planning for this dynamic period of life.
+              strategy is characteristically flexible and alterable, and
+              allowing for change. This strategic decision reflects our
+              acknowledgement and planning for this dynamic period of life.
             </p>
             <br />
           </div>
@@ -153,9 +162,8 @@
       <br />
       <div #item3 style="background-color: #faf9f6; padding: 20px">
         <div class="row">
-
           <div class="col-sm-6" style="color: #212121">
-            <h4  style="margin-top: 0 !important">Business Owners</h4>
+            <h4 style="margin-top: 0 !important">Business Owners</h4>
             <hr />
             <p>
               Jason and James are best friends who started a business together
@@ -179,20 +187,21 @@
             </p>
             <p>
               <span>How we work together:</span>
-              Understanding their business is an important aspect to a successful
-              relationship. We begin with a careful review of where the business
-              stands currently, and where it’s headed. Then we align our
-              strategies to take both trajectories into account, creating a
-              time-based model showing how the strategies will impact growth at
-              each step. Business owners like Jason and James have unique needs
-              that are different from people who work at corporations, which
-              includes a concentrated illiquid wealth position. Planning for this
-              growth along with a defined exit strategy is an important piece to
-              their retirement planning.
+              Understanding their business is an important aspect to a
+              successful relationship. We begin with a careful review of where
+              the business stands currently, and where it’s headed. Then we
+              align our strategies to take both trajectories into account,
+              creating a time-based model showing how the strategies will impact
+              growth at each step. Business owners like Jason and James have
+              unique needs that are different from people who work at
+              corporations, which includes a concentrated illiquid wealth
+              position. Planning for this growth along with a defined exit
+              strategy is an important piece to their retirement planning.
             </p>
           </div>
           <div class="col-sm-6">
-            <img style="margin: 30% 0;"
+            <img
+              style="margin: 30% 0"
               class="img-thumbnail"
               src="./assets/img/joshua-stannard.jpg"
               alt=""
@@ -204,14 +213,15 @@
       <div #item4 style="background-color: #faf9f6; padding: 20px">
         <div class="row">
           <div class="col-sm-6">
-            <img style="margin: 30% 0;"
+            <img
+              style="margin: 30% 0"
               class="img-thumbnail"
               src="./assets/img/ilya-yakover.jpg"
               alt=""
             />
           </div>
           <div class="col-sm-6" style="color: #212121">
-            <h4  style="margin-top: 0 !important">Inherited Wealth</h4>
+            <h4 style="margin-top: 0 !important">Inherited Wealth</h4>
             <hr />
             <p>
               Joanne’s mother just passed away. Her parents saved their entire
@@ -236,13 +246,13 @@
               <span>How we work together:</span>
               We work with clients like Joanne by first assessing her current
               financial position. We seek to understand what her current assets
-              and liabilities are along with any ongoing expenses, which helps us
-              understand how the inherited money fits into her overall financial
-              status. We then develop a plan that addresses what to do with the
-              assets to achieve several goals. These can include a combination of
-              paying down debt, investing for her future, and continuing the
-              legacy of her mother, meanwhile maximizing the use of the
-              inheritance in making progress towards her families’ future
+              and liabilities are along with any ongoing expenses, which helps
+              us understand how the inherited money fits into her overall
+              financial status. We then develop a plan that addresses what to do
+              with the assets to achieve several goals. These can include a
+              combination of paying down debt, investing for her future, and
+              continuing the legacy of her mother, meanwhile maximizing the use
+              of the inheritance in making progress towards her families’ future
               successes.
             </p>
           </div>
