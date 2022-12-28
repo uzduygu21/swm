@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class WhoWeServeComponent {
   focus: any;
   focus1: any;
+
+  inView(ele: any) {
+    ele.scrollIntoView(false);
+  }
 }
