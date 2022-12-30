@@ -5,6 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingComponent } from './landing/landing.component';
 import { AboutComponent } from './about/about.component';
 import { WhoWeServeComponent } from './who-we-serve/who-we-serve.component';
+import { ServicesComponent } from './services/services.component';
 
 
 
@@ -12,7 +13,8 @@ import { WhoWeServeComponent } from './who-we-serve/who-we-serve.component';
   declarations: [
     LandingComponent,
     AboutComponent,
-    WhoWeServeComponent
+    WhoWeServeComponent,
+    ServicesComponent
   ],
   imports: [
     CommonModule,
