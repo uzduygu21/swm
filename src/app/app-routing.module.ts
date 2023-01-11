@@ -6,6 +6,7 @@ import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.compo
 import { AboutComponent } from './examples/about/about.component';
 import { WhoWeServeComponent } from './examples/who-we-serve/who-we-serve.component';
 import { ServicesComponent } from './examples/services/services.component';
+import { BlogComponent } from './examples/blog/blog.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'nucleoicons', component: NucleoiconsComponent },
   { path: 'about',  component: AboutComponent },
   { path: 'whoweserve', component: WhoWeServeComponent },
-  { path: 'services', component: ServicesComponent}
+  { path: 'services', component: ServicesComponent},
+  { path: 'blog',  component: BlogComponent }
 ];
 
 @NgModule({

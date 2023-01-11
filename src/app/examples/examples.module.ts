@@ -6,6 +6,7 @@ import { LandingComponent } from './landing/landing.component';
 import { AboutComponent } from './about/about.component';
 import { WhoWeServeComponent } from './who-we-serve/who-we-serve.component';
 import { ServicesComponent } from './services/services.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 
@@ -14,7 +15,8 @@ import { ServicesComponent } from './services/services.component';
     LandingComponent,
     AboutComponent,
     WhoWeServeComponent,
-    ServicesComponent
+    ServicesComponent,
+    BlogComponent
   ],
   imports: [
     CommonModule,
