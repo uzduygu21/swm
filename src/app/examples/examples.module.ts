@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { WhoWeServeComponent } from './who-we-serve/who-we-serve.component';
 import { ServicesComponent } from './services/services.component';
 import { BlogComponent } from './blog/blog.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -16,7 +17,8 @@ import { BlogComponent } from './blog/blog.component';
     AboutComponent,
     WhoWeServeComponent,
     ServicesComponent,
-    BlogComponent
+    BlogComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
