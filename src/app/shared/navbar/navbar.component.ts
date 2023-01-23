@@ -1,5 +1,6 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +10,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 export class NavbarComponent {
   private toggleButton: any;
   private sidebarVisible: boolean;
+  @ViewChild('togglingOnHover') togglingOnHover!: ElementRef;
 
   constructor(public location: Location, private element : ElementRef) {
     this.sidebarVisible = false;
@@ -18,6 +20,12 @@ export class NavbarComponent {
     const navbar: HTMLElement = this.element.nativeElement;
     this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
 }
+
+onHover(event: any) {
+console.log("HOVERED", event)
+
+}
+
 sidebarOpen() {
   const toggleButton = this.toggleButton;
   const html = document.getElementsByTagName('html')[0];

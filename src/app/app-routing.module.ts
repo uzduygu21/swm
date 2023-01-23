@@ -8,6 +8,7 @@ import { WhoWeServeComponent } from './examples/who-we-serve/who-we-serve.compon
 import { ServicesComponent } from './examples/services/services.component';
 import { BlogComponent } from './examples/blog/blog.component';
 import { ContactComponent } from './examples/contact/contact.component';
+import { PlanningProcessComponent } from './examples/planning-process/planning-process.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'about',  component: AboutComponent },
   { path: 'whoweserve', component: WhoWeServeComponent },
   { path: 'services', component: ServicesComponent},
+  { path: 'planningprocess', component: PlanningProcessComponent },
   { path: 'blog',  component: BlogComponent },
   { path: 'contact',  component: ContactComponent }
 ];

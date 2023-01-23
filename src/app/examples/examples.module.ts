@@ -8,6 +8,7 @@ import { WhoWeServeComponent } from './who-we-serve/who-we-serve.component';
 import { ServicesComponent } from './services/services.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
+import { PlanningProcessComponent } from './planning-process/planning-process.component';
 
 
 
@@ -18,7 +19,8 @@ import { ContactComponent } from './contact/contact.component';
     WhoWeServeComponent,
     ServicesComponent,
     BlogComponent,
-    ContactComponent
+    ContactComponent,
+    PlanningProcessComponent
   ],
   imports: [
     CommonModule,

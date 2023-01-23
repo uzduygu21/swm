@@ -1,14 +1,14 @@
-  #main-heading {
+#main-heading {
     text-shadow: 2px 2px 0px #484848, 5px 4px 0px rgb(0 0 0 / 15%);
     font-family: DM Sans;
     font-weight: 700;
     font-size: 2.5rem;
-    padding-bottom: 20px;
     position: relative;
+    text-align: left !important;
   }
   
   /* page content */
-  h1, h2, h6 {
+  h1, h2, h5, h6 {
     color: white;
     font-family: Trebuchet MS;
     font-weight: bold;
@@ -22,16 +22,16 @@
 
   .header-inside-image {
     border-left: 4px solid #fff; 
-    padding-left: 35px;
+    padding-left: 20px;
   }
 
-  #intro {
+  .title {
     color: #023047;
-    font-family: Gotham, Trajan, Pro !important;   
-    font-weight: 500;
+    font-family: DM Sans;
+    font-weight: 700;
   }
 
-  .about-us-sec {
+  .blue-sec {
     background-color: #ebf7ff; 
     padding: 20px;
   }

@@ -18,25 +18,31 @@
         <div class="collapse navbar-collapse" id="navbar-transparent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link nav-style" href="#"><i aria-hidden="true"></i> Home</a>
+                    <a class="nav-link nav-style" href="#"> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-style" [routerLink]="['/about']"><i aria-hidden="true"></i> About Us</a>
+                    <a class="nav-link nav-style" [routerLink]="['/about']"> About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-style" [routerLink]="['/whoweserve']"><i aria-hidden="true"></i> Who We Serve</a>
+                    <a class="nav-link nav-style" [routerLink]="['/whoweserve']"> Who We Serve</a>
+                </li>
+                <li class="nav-item" placement="bottom-end" style="cursor: pointer;">
+                    <div ngbDropdown #myDrop="ngbDropdown" class="d-inline-block dropdown" (mouseenter)="$event.stopPropagation(); myDrop.open();" >
+                        <a class="nav-link nav-style" id="dropdownBasic1" ngbDropdownToggle> Services</a>
+                        <div #togglingOnHover ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
+                            <a class="dropdown-item" [routerLink]="['/planningprocess']">Planning Process</a>
+                            <a class="dropdown-item" [routerLink]="['/services']">Services</a>
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-style" [routerLink]="['/services']"><i aria-hidden="true"></i> Services</a>
+                    <a class="nav-link nav-style" [routerLink]="['/blog']"> Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-style" [routerLink]="['/blog']"><i aria-hidden="true"></i> Blog</a>
+                    <a class="nav-link nav-style" [routerLink]="['/contact']"> Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-style" [routerLink]="['/contact']"><i aria-hidden="true"></i> Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-style" href="https://wealth.emaplan.com/ent/SignIn?ent%2fema%2flts%2ftriad%2fnathanlee"><i aria-hidden="true"></i> Client Login</a>
+                    <a class="nav-link nav-style" href="https://wealth.emaplan.com/ent/SignIn?ent%2fema%2flts%2ftriad%2fnathanlee"> Client Login</a>
                 </li>
             </ul>
         </div>
