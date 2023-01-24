@@ -17,13 +17,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbar-transparent">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+                <li class="nav-item" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
                     <a class="nav-link nav-style" href="#"> Home</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
                     <a class="nav-link nav-style" [routerLink]="['/about']"> About Us</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
                     <a class="nav-link nav-style" [routerLink]="['/whoweserve']"> Who We Serve</a>
                 </li>
                 <li class="nav-item" placement="bottom-end" style="cursor: pointer;">
@@ -35,13 +35,13 @@
                         </div>
                     </div>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
                     <a class="nav-link nav-style" [routerLink]="['/blog']"> Blog</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
                     <a class="nav-link nav-style" [routerLink]="['/contact']"> Contact</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
                     <a class="nav-link nav-style" href="https://wealth.emaplan.com/ent/SignIn?ent%2fema%2flts%2ftriad%2fnathanlee"> Client Login</a>
                 </li>
             </ul>
