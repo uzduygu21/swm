@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <div [hidden]="!desktopOrMobile" class="page-header section-dark">
+  <div [hidden]="!desktopOrMobile" class="page-header section-dark" style="justify-content: center;">
     <video
       id="background-video"
       playsinline
@@ -11,15 +11,19 @@
       <source src="assets/img/nyc-video.mp4" type="video/mp4" />
     </video>
     <div class="filter"></div>
-    <div class="container content-center">
-      <div class="row">
-        <div class="header-inside-image">
-          <h1 id="main-heading">
-            Financial Planning for the Busy Professional
-          </h1>
+      <div class="content-center">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="header-inside-image">
+              <h1 id="main-heading">
+                Financial Planning for the Busy Professional
+              </h1>
+            </div>
+          </div>
         </div>
+
       </div>
-    </div>
+
   </div>
   <div
     [hidden]="desktopOrMobile"

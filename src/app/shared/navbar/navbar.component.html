@@ -28,7 +28,7 @@
                 </li>
                 <li class="nav-item" placement="bottom-end" style="cursor: pointer;">
                     <div ngbDropdown #myDrop="ngbDropdown" class="d-inline-block dropdown" (mouseenter)="$event.stopPropagation(); myDrop.open();" >
-                        <a class="nav-link nav-style" id="dropdownBasic1" ngbDropdownToggle> Services</a>
+                        <a class="nav-link nav-style" id="dropdownBasic1" ngbDropdownToggle [routerLink]="['/planningprocess']"> Services</a>
                         <div #togglingOnHover ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
                             <a class="dropdown-item" [routerLink]="['/planningprocess']">Planning Process</a>
                             <a class="dropdown-item" [routerLink]="['/services']">Services</a>
