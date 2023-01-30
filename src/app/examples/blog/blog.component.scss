@@ -30,3 +30,8 @@
     font-family: DM Sans;
     font-weight: 700;
   }
+
+  #changed {
+    -webkit-filter: hue-rotate(180deg);
+    filter: hue-rotate(180deg);
+  }
