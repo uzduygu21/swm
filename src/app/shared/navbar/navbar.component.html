@@ -26,18 +26,18 @@
                 <li class="nav-item" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
                     <a class="nav-link nav-style" [routerLink]="['/whoweserve']"> Who We Serve</a>
                 </li>
-                <li class="nav-item" placement="bottom-end" style="cursor: pointer;">
-                    <div ngbDropdown #myDrop="ngbDropdown" class="d-inline-block dropdown" (mouseenter)="$event.stopPropagation(); myDrop.open();" >
-                        <a class="nav-link nav-style" id="dropdownBasic1" ngbDropdownToggle [routerLink]="['/planningprocess']"> Services</a>
-                        <div #togglingOnHover ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-primary" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
+                <li style="margin-bottom: 0 !important;" class="nav-item" placement="bottom-end" style="cursor: pointer;">
+                    <div style="margin-bottom: 0 !important;" ngbDropdown #myDrop="ngbDropdown" class="dropdown-show" (mouseenter)="$event.stopPropagation(); myDrop.open();" >
+                        <a style="margin-bottom: 0 !important;" class="nav-link nav-style dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownBasic1" ngbDropdownToggle [routerLink]="['/planningprocess']"> Services</a>
+                        <div style="margin-top: 0 !important;border-radius: 0px !important;" #togglingOnHover ngbDropdownMenu aria-labelledby="dropdownBasic1"  (mouseleave)="$event.stopPropagation(); myDrop.close();" >
                             <a class="dropdown-item" [routerLink]="['/planningprocess']">Planning Process</a>
                             <a class="dropdown-item" [routerLink]="['/services']">Services</a>
                         </div>
                     </div>
                 </li>
-                <li class="nav-item" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
+                <!-- <li class="nav-item" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
                     <a class="nav-link nav-style" [routerLink]="['/blog']"> Blog</a>
-                </li>
+                </li> -->
                 <li class="nav-item" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
                     <a class="nav-link nav-style" [routerLink]="['/contact']"> Contact</a>
                 </li>

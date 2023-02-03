@@ -2,7 +2,7 @@
     .dropdown-menu{
         background-color: $white-color;
         border: 0 none;
-        border-radius: $border-radius-extreme;
+        // border-radius: $border-radius-extreme;
         display: block;
         margin-top: 10px;
         padding: 0px;
@@ -57,14 +57,14 @@
 
         .dropdown-item:first-child a,
         .dropdown-item:first-child{
-           border-top-left-radius: $border-radius-extreme;
-           border-top-right-radius: $border-radius-extreme;
+        //    border-top-left-radius: $border-radius-extreme;
+        //    border-top-right-radius: $border-radius-extreme;
         }
 
         .dropdown-item:last-child a,
         .dropdown-item:last-child{
-            border-bottom-left-radius: $border-radius-extreme;
-            border-bottom-right-radius: $border-radius-extreme;
+            // border-bottom-left-radius: $border-radius-extreme;
+            // border-bottom-right-radius: $border-radius-extreme;
         }
 
         .select & .dropdown-item:first-child a{
