@@ -8,8 +8,10 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  isMenuCollapsed = true;
+  collapsed = true;
   private toggleButton: any;
-  private sidebarVisible: boolean;
+  public sidebarVisible: boolean;
   @ViewChild('togglingOnHover') togglingOnHover!: ElementRef;
 
   constructor(public location: Location, private element : ElementRef) {
@@ -55,4 +57,5 @@ sidebarToggle() {
       this.sidebarClose();
   }
 };
+
 }
