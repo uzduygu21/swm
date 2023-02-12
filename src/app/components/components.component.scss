@@ -57,7 +57,7 @@
   h2 { font-size: 3rem; }
   
   @media (max-width: 750px) {
-      #background-video { display: none; }
+      #background-video { display: block; }
       body {
         background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
         background-size: cover;

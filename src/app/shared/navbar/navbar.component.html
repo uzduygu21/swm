@@ -61,7 +61,7 @@
             (mouseenter)="$event.stopPropagation(); myDrop.open()">
             <a style="margin-bottom: 0 !important" class="nav-link nav-style" [ngClass]="{'mobile': sidebarVisible}"
               data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false" id="dropdownBasic1" ngbDropdownToggle>
+              aria-expanded="false" id="dropdownBasic1" ngbDropdownToggle [routerLink]="['/planningprocess']">
               Services
             </a>
             <div

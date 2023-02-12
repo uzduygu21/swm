@@ -4,13 +4,14 @@
     class="page-header section-dark"
     style="justify-content: center"
   >
-    <video
+    <video 
       id="background-video"
       playsinline
       loop
       autoplay
       [muted]="true"
       poster="assets/img/nyc-photo.jpg"
+      style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); min-width: calc(100% + 2px); min-height: calc(100% + 2px); opacity: 1; max-height: calc(100% + 2px);"
     >
       <source src="assets/img/nyc-video.mp4" type="video/mp4" />
     </video>
@@ -31,7 +32,7 @@
     [hidden]="desktopOrMobile"
     class="page-header bg-image img-fluid"
     data-parallax="true"
-    style="background-image: url('./assets/img/nyc-photo.jpg')"
+    
   >
     <div class="filter"></div>
 
