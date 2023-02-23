@@ -7,8 +7,6 @@ import { BlogComponent } from './examples/blog/blog.component';
 import { ContactComponent } from './examples/contact/contact.component';
 import { ComponentsComponent } from './examples/components/components.component';
 import { PlanningProcessComponent } from './examples/planning-process/planning-process.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 
 
 const routes: Routes = [
@@ -22,8 +20,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true }),
-    FormsModule, ReactiveFormsModule],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

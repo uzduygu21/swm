@@ -4,16 +4,18 @@
   style="background-image: url('./assets/img/contact-us-bg.jpg')"
 >
   <div class="filter"></div>
-    <div class="container content-center">
-      <div class="row">
-        <div style="width:100px;">&nbsp;</div>
-        <div class="header-inside-image">
-          <h1 id="main-heading">Contact Us</h1>
-          <h3 style="margin-top: 0px; text-align: left;">Are You Ready To Take the Next Step?</h3>
-        </div>
+  <div class="container content-center">
+    <div class="row">
+      <div style="width: 100px">&nbsp;</div>
+      <div class="header-inside-image">
+        <h1 id="main-heading">Contact Us</h1>
+        <h3 style="margin-top: 0px; text-align: left">
+          Are You Ready To Take the Next Step?
+        </h3>
       </div>
     </div>
   </div>
+</div>
 
 <div class="main">
   <div class="section">
@@ -32,35 +34,40 @@
         <div class="row">
           <div class="col-md-4">
             <img
-              style="max-height: 400px; display: block; margin: auto;"
+              style="max-height: 400px; display: block; margin: auto"
               class="img-thumbnail"
               src="./assets/img/nathan-lee.jpg"
               alt="Photo of Nathan Lee"
             />
             <p class="text-center">
-            <a class="font-blue-color"
-              style="text-align: center"
-              href="mailto:nathan@servetwealth.com"
-              >nathan@servetwealth.com</a
-            >
+              <a
+                class="font-blue-color"
+                style="text-align: center"
+                href="mailto:nathan@servetwealth.com"
+                >nathan@servetwealth.com</a
+              >
             </p>
             <p class="text-center">
-            <a class="font-blue-color" href="tel:6464735800">
-              <i class="fa fa-phone fa-fw c-topbar-phone-icn c-phone--icn"></i>
-              646-473-5800
-            </a>
+              <a class="font-blue-color" href="tel:6464735800">
+                <i
+                  class="fa fa-phone fa-fw c-topbar-phone-icn c-phone--icn"
+                ></i>
+                646-473-5800
+              </a>
             </p>
           </div>
           <div class="col-md-8 mr-auto ml-auto">
             <h2
               class="text-center font-blue-color"
-              style="
-                font-family: Gotham, Trajan, Pro !important;
-              "
+              style="font-family: Gotham, Trajan, Pro !important"
             >
               Let's Chat!
             </h2>
-            <form class="contact-form">
+            <form
+              class="contact-form"
+              [formGroup]="contactForm"
+              (ngSubmit)="save()"
+            >
               <div class="row">
                 <div class="col-md-6">
                   <label>Name</label>
@@ -71,12 +78,16 @@
                       ></span>
                     </div>
                     <input
+                      formControlName="senderName"
                       type="text"
                       class="form-control"
                       placeholder="Name"
                       (focus)="focus = true"
                       (blur)="focus = false"
                     />
+                    <div *ngIf="contactForm.get('senderName')?.invalid && (contactForm.get('senderName')?.dirty || contactForm.get('senderName')?.touched)" class="form-control-feedback">
+                      <div *ngIf="contactForm.get('senderName')?.errors?.['required']">Full name is required</div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -88,24 +99,33 @@
                       ></span>
                     </div>
                     <input
+                      formControlName="senderEmail"
                       type="text"
                       class="form-control"
                       placeholder="Email"
                       (focus)="focus1 = true"
-                      (blur)="focus1 = false"
+                      (blur)="focus1 = false" 
                     />
+                    <div *ngIf="contactForm.get('senderEmail')?.invalid && (contactForm.get('senderEmail')?.dirty || contactForm.get('senderEmail')?.touched)" class="form-control-feedback">
+                      <div *ngIf="contactForm.get('senderEmail')?.errors?.['required']">Email is required</div>
+                      <div *ngIf="contactForm.get('senderEmail')?.errors?.['email']">Email must be a valid email address</div> 
+                    </div>
                   </div>
                 </div>
               </div>
               <label>Message</label>
               <textarea
+                formControlName="message"
                 class="form-control"
                 rows="4"
                 placeholder="Tell us your thoughts and feelings..."
               ></textarea>
               <div class="row">
                 <div class="col-md-4 mr-auto ml-auto">
-                  <button class="btn btn-info btn-lg btn-fill">
+                  <button
+                    class="btn btn-info btn-lg btn-fill"
+                    
+                  >
                     Send Message
                   </button>
                 </div>
@@ -118,12 +138,13 @@
       <br />
       <div class="container who-we-serve-sec">
         <div class="row justify-content-md-center">
-          <div class="col col-lg-4" style="text-align: right;">
+          <div class="col col-lg-4" style="text-align: right">
             <a
               href="https://outlook.office365.com/owa/calendar/MeetingwithNathan@servetwealth.com/bookings/"
               class="btn btn-link btn-default"
             >
-              <span class="font-blue-color"
+              <span
+                class="font-blue-color"
                 style="
                   font-family: Gotham, Trajan, Pro !important;
                   font-size: large;
@@ -140,7 +161,7 @@
               href="https://outlook.office365.com/owa/calendar/MeetingwithNathan@servetwealth.com/bookings/"
             >
               <button class="btn btn-info btn-lg btn-fill">
-                <i class="fa fa-calendar"></i> &nbsp;  BOOK HERE
+                <i class="fa fa-calendar"></i> &nbsp; BOOK HERE
               </button>
             </a>
           </div>

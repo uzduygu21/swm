@@ -6,7 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { WhoWeServeComponent } from './who-we-serve/who-we-serve.component';
 import { ServicesComponent } from './services/services.component';
 import { BlogComponent } from './blog/blog.component';
-import { ContactComponent } from './contact/contact.component';
+// import { ContactComponent } from './contact/contact.component';
 import { PlanningProcessComponent } from './planning-process/planning-process.component';
 import { ComponentsComponent } from './components/components.component';
 
@@ -18,15 +18,15 @@ import { ComponentsComponent } from './components/components.component';
     WhoWeServeComponent,
     ServicesComponent,
     BlogComponent,
-    ContactComponent,
+    // ContactComponent,
     PlanningProcessComponent,
     ComponentsComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     NgbModule,
-    ReactiveFormsModule
   ]
 })
 export class ExamplesModule { }
