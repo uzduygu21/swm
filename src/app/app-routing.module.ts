@@ -6,7 +6,8 @@ import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.compo
 
 
 const routes: Routes = [
-  { path: '',      component: ComponentsComponent, pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home',      component: ComponentsComponent },
   { path: 'landing',          component: LandingComponent },
   { path: 'nucleoicons',      component: NucleoiconsComponent }
 ];
