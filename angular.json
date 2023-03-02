@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/servet-wealth-management",
+            "outputPath": "docs/servet-wealth-management",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
