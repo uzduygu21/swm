@@ -1,7 +1,7 @@
 {
   "name": "servet-wealth-management",
   "version": "0.0.0",
-  "homepage": "https://uzduygu21.github.io/",
+  "homepage": "http://uzduygu21.github.io/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
