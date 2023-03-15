@@ -10,14 +10,14 @@ import { PlanningProcessComponent } from './examples/planning-process/planning-p
 
 
 const routes: Routes = [
-  { path: 'home', component: ComponentsComponent },
+  { path: '', component: ComponentsComponent },
   { path: 'about',  component: AboutComponent },
   { path: 'whoweserve', component: WhoWeServeComponent },
   { path: 'services', component: ServicesComponent},
   { path: 'planningprocess', component: PlanningProcessComponent },
   { path: 'blog',  component: BlogComponent },
   { path: 'contact',  component: ContactComponent },
-  { path: '**', redirectTo: '/home', pathMatch: 'full' }
+  { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
 
 @NgModule({
