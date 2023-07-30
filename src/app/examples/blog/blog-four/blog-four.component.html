@@ -1,0 +1,41 @@
+<div class="container" [ngClass]="{'limitTextHeight': isReadMore}">
+  <div class="row">
+    <div class="col-md-6 mr-auto ml-auto">
+      <time class="entry-time">{{ blogFourContent.date }}</time>
+      <h4 class="title" style="text-align: left; margin-top: 10px">
+        {{ blogFourContent.title }}
+      </h4>
+    </div>
+    <div class="col-md-6 mr-auto ml-auto"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mr-auto ml-auto" style="text-align: left">
+      <p>{{ blogFourContent.description }}</p>
+      <p>{{ blogFourContent.question }}</p>
+      <p>{{ blogFourContent.descriptionTwo }}</p>
+      <p>{{ blogFourContent.descriptionThree }}</p>
+      <h6 class="item-headers">{{ blogFourContent.headerOne }}</h6>
+      <p>{{ blogFourContent.prgPossibleSolutions }}</p>
+      <p>{{ blogFourContent.anotherPrgPossibleSolutions }}</p>
+      <h6 class="item-headers">{{ blogFourContent.headerTwo }}</h6>
+      <p>{{ blogFourContent.prgToughDecision }}</p>
+      <p>
+        Understanding the tax liabilities of the assets you own is an important
+        consideration when investing in mutual funds. If you would like to have
+        a discussion around your investment portfolio, contact me at
+        <a
+          class="email-link"
+          style="text-align: center"
+          href="mailto:nathan@servetwealth.com"
+          >nathan@servetwealth.com</a
+        >.
+      </p>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+<div class="container">
+  <button (click)="showText()" class="read-more-button">
+    {{ isReadMore ? 'Read More': 'Read Less' }}
+  </button>
+</div>

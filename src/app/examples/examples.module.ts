@@ -5,11 +5,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AboutComponent } from './about/about.component';
 import { WhoWeServeComponent } from './who-we-serve/who-we-serve.component';
 import { ServicesComponent } from './services/services.component';
-import { BlogComponent } from './blog/blog.component';
+// import { BlogComponent } from './blog/blog.component';
 // import { ContactComponent } from './contact/contact.component';
 import { PlanningProcessComponent } from './planning-process/planning-process.component';
 import { ComponentsComponent } from './components/components.component';
-
 
 
 @NgModule({
@@ -17,10 +16,10 @@ import { ComponentsComponent } from './components/components.component';
     AboutComponent,
     WhoWeServeComponent,
     ServicesComponent,
-    BlogComponent,
+    // BlogComponent,
     // ContactComponent,
     PlanningProcessComponent,
-    ComponentsComponent
+    ComponentsComponent,
   ],
   imports: [
     CommonModule,
