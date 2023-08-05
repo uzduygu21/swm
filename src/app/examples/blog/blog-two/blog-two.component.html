@@ -1,0 +1,53 @@
+<div class="container" [ngClass]="{'limitTextHeight': isReadMore}">
+  <div class="row">
+    <div class="col-md-6 mr-auto ml-auto">
+      <time class="entry-time">{{ blogTwoContent.date }}</time>
+      <h4 class="title" style="text-align: left; margin-top: 10px">
+        {{ blogTwoContent.title }}
+      </h4>
+    </div>
+    <div class="col-md-6 mr-auto ml-auto"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mr-auto ml-auto" style="text-align: left">
+      <p>{{ blogTwoContent.description }}</p>
+      <p>{{ blogTwoContent.secondParagraph }}</p>
+      <ul>
+        <li *ngFor="let blogListItem of blogTwoContent.list; index as i">
+          <h6 class="item-headers">{{ blogListItem.listHeader }}</h6>
+          <p>
+            {{ blogListItem.listDescription }}
+          </p>
+        </li>
+        <p>
+          Because municipal bonds offer interest that is free from federal
+          taxes, they typically generate less income than treasury bonds in the
+          same period. Municipal bonds can be a great investment if held to
+          maturity. However, some states and local municipalities might have a
+          lower credit rating as they may be perceived as not having the ability
+          to pay back the original loan, leading some states to have higher
+          interest rate yields than others. Before investing in municipal bonds,
+          make sure you understand the different risks involved which can
+          include credit risk, duration risk and interest rate risk.
+        </p>
+        <p>
+          If you have any questions or would like to learn more about these
+          methods of earning interest on your money, please contact me at
+          <a
+          class="email-link"
+          style="text-align: center"
+          href="mailto:nathan@servetwealth.com"
+          >nathan@servetwealth.com</a
+        >.
+        </p>
+      </ul>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+<div class="container">
+  <button (click)="showText()" class="read-more-button">
+    {{ isReadMore ? 'Read More': 'Read Less' }}
+  </button>
+</div>
+
