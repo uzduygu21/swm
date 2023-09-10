@@ -1,9 +1,14 @@
-<div class="container" [ngClass]="{'limitTextHeight': isReadMore}">
+<div *ngIf="blogSpecificPage">
+  <app-blog-header></app-blog-header>
+</div>
+<div class="container" [ngClass]="{ limitTextHeight: isReadMore }">
   <div class="row">
     <div class="col-md-6 mr-auto ml-auto">
       <time class="entry-time">{{ blogTwoContent.date }}</time>
       <h4 class="title" style="text-align: left; margin-top: 10px">
-        {{ blogTwoContent.title }}
+        <a routerLinkActive="active" routerLink="/blog/earn-more-interest">
+          {{ blogTwoContent.title }}
+        </a>
       </h4>
     </div>
     <div class="col-md-6 mr-auto ml-auto"></div>
@@ -34,11 +39,11 @@
           If you have any questions or would like to learn more about these
           methods of earning interest on your money, please contact me at
           <a
-          class="email-link"
-          style="text-align: center"
-          href="mailto:hello@servetwealth.com"
-          >hello@servetwealth.com</a
-        >.
+            class="email-link"
+            style="text-align: center"
+            href="mailto:hello@servetwealth.com"
+            >hello@servetwealth.com</a
+          >.
         </p>
       </ul>
     </div>
@@ -47,7 +52,6 @@
 </div>
 <div class="container">
   <button (click)="showText()" class="read-more-button">
-    {{ isReadMore ? 'Read More': 'Read Less' }}
+    {{ isReadMore ? "Read More" : "Read Less" }}
   </button>
 </div>
-

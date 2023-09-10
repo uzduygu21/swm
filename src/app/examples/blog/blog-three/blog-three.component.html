@@ -1,9 +1,14 @@
+<div *ngIf= 'blogSpecificPage'>
+  <app-blog-header></app-blog-header>
+</div>
 <div class="container" [ngClass]="{'limitTextHeight': isReadMore}">
   <div class="row">
     <div class="col-md-6 mr-auto ml-auto">
       <time class="entry-time">{{ blogThreeContent.date }}</time>
       <h4 class="title" style="text-align: left; margin-top: 10px">
-        {{ blogThreeContent.title }}
+        <a routerLinkActive="active" routerLink="/blog/job-transition">
+          {{ blogThreeContent.title }}
+        </a>
       </h4>
     </div>
     <div class="col-md-6 mr-auto ml-auto"></div>

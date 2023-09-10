@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocationStrategy } from '@angular/common';
 
 @Component({
   selector: 'app-blog-four',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog-four.component.scss']
 })
 export class BlogFourComponent implements OnInit {
+
+  blogSpecificPage: boolean = false;
 
   blogFourContent = {
     date: 'April 5,2023',
@@ -53,9 +56,12 @@ export class BlogFourComponent implements OnInit {
     this.isReadMore = !this.isReadMore;
   }
 
-  constructor() { }
+  constructor(private url:LocationStrategy) { }
 
   ngOnInit(): void {
+    if(this.url.path() == '/blog/mutual-fund-taxes') {
+      this.blogSpecificPage = true;
+    }
   }
 
 }

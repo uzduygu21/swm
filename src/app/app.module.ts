@@ -18,6 +18,8 @@ import { BlogThreeComponent } from './examples/blog/blog-three/blog-three.compon
 import { BlogFourComponent } from './examples/blog/blog-four/blog-four.component';
 import { BlogFiveComponent } from './examples/blog/blog-five/blog-five.component';
 import { TruncatePipe } from './examples/blog/truncate.pipe';
+import { BlogHeaderComponent } from './examples/blog/blog-header/blog-header.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { TruncatePipe } from './examples/blog/truncate.pipe';
     BlogThreeComponent,
     BlogFourComponent,
     BlogFiveComponent,
-    TruncatePipe
+    TruncatePipe,
+    BlogHeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocationStrategy } from '@angular/common';
 
 @Component({
   selector: 'app-blog-one',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog-one.component.scss'],
 })
 export class BlogOneComponent implements OnInit {
+  isReadMore = true;
+  blogSpecificPage: boolean = false;
+
+
   blogOneContent = {
     date: 'January 1,2023',
     title:
@@ -103,13 +108,15 @@ export class BlogOneComponent implements OnInit {
     ],
   };
 
-  isReadMore = true;
-
   showText() {
     this.isReadMore = !this.isReadMore;
   }
 
-  constructor() {}
+  constructor(private url:LocationStrategy) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if(this.url.path() == '/blog/new-year-new-goals') {
+      this.blogSpecificPage = true;
+    }
+  }
 }
