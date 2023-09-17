@@ -12,6 +12,7 @@ import { BlogTwoComponent } from './examples/blog/blog-two/blog-two.component';
 import { BlogThreeComponent } from './examples/blog/blog-three/blog-three.component';
 import { BlogFourComponent } from './examples/blog/blog-four/blog-four.component';
 import { BlogFiveComponent } from './examples/blog/blog-five/blog-five.component';
+import { BlogSixComponent } from './examples/blog/blog-six/blog-six.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
     { path: 'job-transition',  component: BlogThreeComponent },
     { path: 'mutual-fund-taxes',  component: BlogFourComponent },
     { path: 'hsa-shoebox-strategy',  component: BlogFiveComponent },
+    { path: 'what-is-inside-spy',  component: BlogSixComponent },
   ]
  },
   { path: 'contact',  component: ContactComponent },

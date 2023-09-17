@@ -17,6 +17,7 @@ import { BlogTwoComponent } from './examples/blog/blog-two/blog-two.component';
 import { BlogThreeComponent } from './examples/blog/blog-three/blog-three.component';
 import { BlogFourComponent } from './examples/blog/blog-four/blog-four.component';
 import { BlogFiveComponent } from './examples/blog/blog-five/blog-five.component';
+import { BlogSixComponent } from './examples/blog/blog-six/blog-six.component';
 import { TruncatePipe } from './examples/blog/truncate.pipe';
 import { BlogHeaderComponent } from './examples/blog/blog-header/blog-header.component';
 
@@ -33,6 +34,7 @@ import { BlogHeaderComponent } from './examples/blog/blog-header/blog-header.com
     BlogThreeComponent,
     BlogFourComponent,
     BlogFiveComponent,
+    BlogSixComponent,
     TruncatePipe,
     BlogHeaderComponent
   ],
