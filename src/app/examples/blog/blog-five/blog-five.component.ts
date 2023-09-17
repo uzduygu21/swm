@@ -105,7 +105,12 @@ export class BlogFiveComponent implements OnInit {
   ngOnInit(): void {
     if(this.url.path() == '/blog/hsa-shoebox-strategy') {
       this.blogSpecificPage = true;
+      this.isReadMore = false;
     }
   }
+
+  // shareOnLinkedIn() {
+  //   window.open(`https://www.linkedin.com/shareArticle?url=https://servetwealth.com/#/blog/hsa-shoebox-strategy&title=${this.blogFiveContent.title}&summary=${this.blogFiveContent.description}`, 'sharer');
+  // }
 
 }

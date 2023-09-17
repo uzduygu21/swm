@@ -70,6 +70,7 @@ export class BlogTwoComponent implements OnInit {
   ngOnInit(): void {
     if(this.url.path() == '/blog/earn-more-interest') {
       this.blogSpecificPage = true;
+      this.isReadMore = false;
     }
   }
 }

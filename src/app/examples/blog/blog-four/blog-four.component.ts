@@ -61,6 +61,7 @@ export class BlogFourComponent implements OnInit {
   ngOnInit(): void {
     if(this.url.path() == '/blog/mutual-fund-taxes') {
       this.blogSpecificPage = true;
+      this.isReadMore = false;
     }
   }
 

@@ -70,6 +70,7 @@ export class BlogThreeComponent implements OnInit {
   ngOnInit(): void {
     if(this.url.path() == '/blog/job-transition') {
       this.blogSpecificPage = true;
+      this.isReadMore = false;
     }
   }
 

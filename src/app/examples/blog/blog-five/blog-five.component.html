@@ -2,7 +2,8 @@
   <app-blog-header></app-blog-header>
 </div>
 
-<div class="container" [ngClass]="{ limitTextHeight: isReadMore }">
+<div class="container" [ngClass]="{ limitTextHeight: isReadMore }"
+[ngStyle]="{'padding': blogSpecificPage ? '3rem' : ''}">
   <div class="row">
     <div class="col-md-6 mr-auto ml-auto">
       <time class="entry-time">{{ blogFiveContent.date }}</time>
@@ -50,8 +51,8 @@
     <div class="col-md-4"></div>
   </div>
 </div>
-<div class="container">
-  <button (click)="showText()" class="read-more-button">
+<div class="container" [hidden]="blogSpecificPage">
+  <button (click)="showText()" class="read-more-button" >
     {{ isReadMore ? "Read More" : "Read Less" }}
   </button>
 </div>

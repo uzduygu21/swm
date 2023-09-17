@@ -10,7 +10,6 @@ export class BlogOneComponent implements OnInit {
   isReadMore = true;
   blogSpecificPage: boolean = false;
 
-
   blogOneContent = {
     date: 'January 1,2023',
     title:
@@ -117,6 +116,7 @@ export class BlogOneComponent implements OnInit {
   ngOnInit(): void {
     if(this.url.path() == '/blog/new-year-new-goals') {
       this.blogSpecificPage = true;
+      this.isReadMore = false;
     }
   }
 }
