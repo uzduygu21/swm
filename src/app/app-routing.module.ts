@@ -13,6 +13,7 @@ import { BlogThreeComponent } from './examples/blog/blog-three/blog-three.compon
 import { BlogFourComponent } from './examples/blog/blog-four/blog-four.component';
 import { BlogFiveComponent } from './examples/blog/blog-five/blog-five.component';
 import { BlogSixComponent } from './examples/blog/blog-six/blog-six.component';
+import { BlogSevenComponent } from './examples/blog/blog-seven/blog-seven.component';
 
 
 const routes: Routes = [
@@ -30,6 +31,7 @@ const routes: Routes = [
     { path: 'mutual-fund-taxes',  component: BlogFourComponent },
     { path: 'hsa-shoebox-strategy',  component: BlogFiveComponent },
     { path: 'what-is-inside-spy',  component: BlogSixComponent },
+    { path: 'ibonds-2021', component: BlogSevenComponent }
   ]
  },
   { path: 'contact',  component: ContactComponent },

@@ -9,7 +9,6 @@ import { PlanningProcessComponent } from './planning-process/planning-process.co
 import { ComponentsComponent } from './components/components.component';
 
 
-
 @NgModule({
   declarations: [
     AboutComponent,
@@ -17,7 +16,7 @@ import { ComponentsComponent } from './components/components.component';
     ServicesComponent,
     PlanningProcessComponent,
     ComponentsComponent
-  ],
+    ],
   imports: [
     CommonModule,
     FormsModule,
