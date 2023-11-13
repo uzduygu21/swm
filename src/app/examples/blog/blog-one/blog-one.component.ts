@@ -11,7 +11,7 @@ export class BlogOneComponent implements OnInit {
   blogSpecificPage: boolean = false;
 
   blogOneContent = {
-    date: 'January 1,2023',
+    date: 'January 1, 2023',
     title:
       ' Setting Yourself Up for Financial Success; New Year, New Money Goals!',
     description:

@@ -11,7 +11,7 @@ export class BlogFourComponent implements OnInit {
   blogSpecificPage: boolean = false;
 
   blogFourContent = {
-    date: 'April 5,2023',
+    date: 'April 5, 2023',
     title: 'Ask an Advisor: The surprise tax bill coming from your mutual fund',
     description:
       `Last year, I met with new clients to assess their financial concerns. They had begun analyzing their 

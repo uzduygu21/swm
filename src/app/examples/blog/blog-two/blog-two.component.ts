@@ -11,7 +11,7 @@ export class BlogTwoComponent implements OnInit {
   blogSpecificPage: boolean = false;
 
   blogTwoContent = {
-    date: 'February 6,2023',
+    date: 'February 6, 2023',
     title: ' Earn More Interest Than What Your Bank is Giving You',
     description: `The stock market has experienced a significant amount of volatility over the past year, leaving investors 
         and clients uncertain about their investment decisions. Several factors including concerns over inflation, 

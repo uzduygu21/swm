@@ -10,7 +10,7 @@ export class BlogSixComponent implements OnInit {
   blogSpecificPage: boolean = false;
 
   blogSixContent = {
-    date: 'Aug 15,2023',
+    date: 'Aug 15, 2023',
     title: 'What’s Inside; A Look Into SPY',
     description: `What’s inside; This series is meant to help investors understand what they own by taking a look at the 
     underlying assets of an ETF or mutual fund.  We start the series with the world’s largest ETF by assets under management, SPY.   `,

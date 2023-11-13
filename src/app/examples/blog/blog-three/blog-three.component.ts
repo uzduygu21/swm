@@ -11,7 +11,7 @@ export class BlogThreeComponent implements OnInit {
   blogSpecificPage: boolean = false;
 
   blogThreeContent = {
-    date: 'March 3,2023',
+    date: 'March 3, 2023',
     title: 'Navigating a Job transition',
     description:
       `Navigating a job transition can be emotionally and financially taxing. As someone who has personally 

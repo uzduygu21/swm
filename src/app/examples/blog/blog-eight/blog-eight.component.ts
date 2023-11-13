@@ -11,7 +11,7 @@ export class BlogEightComponent implements OnInit {
   isReadMore = true;
 
   blogEightContent = {
-    date: 'Nov 5,2023',
+    date: 'Nov 5, 2023',
     title: 'Charitable Giving Through a Donor-Advised Fund (DAF)',
     description: `In today's world, philanthropy and charitable giving have become increasingly important 
     to many individuals and families. Whether you want to support a specific cause, make a positive impact 

@@ -11,7 +11,7 @@ export class BlogFiveComponent implements OnInit {
   blogSpecificPage: boolean = false;
 
   blogFiveContent = {
-    date: 'June 6,2023',
+    date: 'June 6, 2023',
     title: 'The power of the Health Savings Account and “Shoebox” strategy',
     description:
       `In today’s rapidly changing healthcare landscape, it has become increasingly important for individuals to take 

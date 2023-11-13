@@ -10,7 +10,7 @@ export class BlogSevenComponent implements OnInit {
   blogSpecificPage: boolean = false;
 
   blogSevenContent = {
-    date: 'Oct 8,2023',
+    date: 'Oct 8, 2023',
     title: 'Ask an Advisor: What should I do with the I bonds I purchased in 2021?',
     description: `As inflation started to surge in 2021 and 2022, investors started to put money into I bonds for a sense of safety 
     from the volatile markets and to earn a higher yield than treasuries.  While inflation soared, the fed funds rate remained largely 
