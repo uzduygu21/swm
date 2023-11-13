@@ -67,10 +67,6 @@ export class BlogSevenComponent implements OnInit {
 
   isReadMore = true;
 
-  showText() {
-    this.isReadMore = !this.isReadMore;
-  }
-
   constructor(private url: LocationStrategy) {}
 
   ngOnInit(): void {
@@ -78,6 +74,10 @@ export class BlogSevenComponent implements OnInit {
       this.blogSpecificPage = true;
       this.isReadMore = false;
     }
+  }
+
+  showText() {
+    this.isReadMore = !this.isReadMore;
   }
 
 }
