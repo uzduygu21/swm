@@ -15,6 +15,7 @@ import { BlogFiveComponent } from './examples/blog/blog-five/blog-five.component
 import { BlogSixComponent } from './examples/blog/blog-six/blog-six.component';
 import { BlogSevenComponent } from './examples/blog/blog-seven/blog-seven.component';
 import { BlogEightComponent } from './examples/blog/blog-eight/blog-eight.component';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 
 const routes: Routes = [
@@ -41,7 +42,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+  providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
 })
 export class AppRoutingModule { }
