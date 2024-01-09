@@ -2,10 +2,10 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-components',
-  templateUrl: './components.component.html',
-  styleUrls: ['./components.component.scss']
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class ComponentsComponent implements OnInit{
+export class HomeComponent implements OnInit{
   page = 4;
   page1 = 5;
   focus: any;

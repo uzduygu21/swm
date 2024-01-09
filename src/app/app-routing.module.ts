@@ -5,7 +5,7 @@ import { WhoWeServeComponent } from './examples/who-we-serve/who-we-serve.compon
 import { ServicesComponent } from './examples/services/services.component';
 import { BlogComponent } from './examples/blog/blog.component';
 import { ContactComponent } from './examples/contact/contact.component';
-import { ComponentsComponent } from './examples/components/components.component';
+import { HomeComponent } from './examples/home/home.component';
 import { PlanningProcessComponent } from './examples/planning-process/planning-process.component';
 import { BlogOneComponent } from './examples/blog/blog-one/blog-one.component';
 import { BlogTwoComponent } from './examples/blog/blog-two/blog-two.component';
@@ -19,7 +19,7 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 
 const routes: Routes = [
-  { path: '', component: ComponentsComponent },
+  { path: '', component: HomeComponent },
   { path: 'about',  component: AboutComponent },
   { path: 'whoweserve', component: WhoWeServeComponent },
   { path: 'services', component: ServicesComponent},

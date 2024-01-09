@@ -6,7 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { WhoWeServeComponent } from './who-we-serve/who-we-serve.component';
 import { ServicesComponent } from './services/services.component';
 import { PlanningProcessComponent } from './planning-process/planning-process.component';
-import { ComponentsComponent } from './components/components.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -15,7 +15,7 @@ import { ComponentsComponent } from './components/components.component';
     WhoWeServeComponent,
     ServicesComponent,
     PlanningProcessComponent,
-    ComponentsComponent
+    HomeComponent
     ],
   imports: [
     CommonModule,
