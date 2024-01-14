@@ -21,14 +21,16 @@ export class AppComponent {
 
   ngOnInit() {
     var navbar : HTMLElement = this.element.nativeElement.children[0].children[0];
-    // this._router = this.router.events.filter(event => event instanceof NavigationEnd).subscribe((event: NavigationEnd) => {
-    //     if (window.outerWidth > 991) {
-    //         window.document.children[0].scrollTop = 0;
-    //     }else{
-    //         window.document.activeElement.scrollTop = 0;
-    //     }
-    //     this.navbar.sidebarClose();
-    // });
+    this._router = this.router.events.pipe(
+        filter(event => event instanceof NavigationEnd)
+        ).subscribe(() => {
+        if (window.outerWidth > 991) {
+            window.document.children[0].scrollTop = 0;
+        }else{
+            window.scroll(0, 0);
+        }
+        this.navbar.sidebarClose();
+    });
     this.renderer.listen('window', 'scroll', (event) => {
         const number = window.scrollY;
         if (number > 150 || window.pageYOffset > 150) {
@@ -47,15 +49,5 @@ export class AppComponent {
         var version = parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
     }
 
-}
-removeFooter() {
-    var titlee = this.location.prepareExternalUrl(this.location.path());
-    titlee = titlee.slice( 1 );
-    if(titlee === 'signup' || titlee === 'nucleoicons'){
-        return false;
-    }
-    else {
-        return true;
-    }
 }
 }

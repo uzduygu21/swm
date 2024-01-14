@@ -1,78 +1,112 @@
-<!-- <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
-    <div>
-        <div class="navbar-translate">
-            <a class="navbar-brand" href="https://www.servetwealth.com/" style="margin-left: 5rem;">
-                <img src="assets/img/servet-wealth-logo.jpg" alt="Logo" style="max-height: 5rem;border-radius: 50%;">
-                <span style="color: white;letter-spacing: 2px; margin:10px; font-size: 3rem; font-family: 'Gotham', Trajan, Pro; font-weight: 100;">SERVET</span>
+<nav
+  class="navbar navbar-expand-lg fixed-top navbar-transparent"
+  color-on-scroll="500"
+>
+  <div class="container">
+    <div class="navbar-translate">
+      <div class="box">
+        <div>
+          <img
+            src="assets/img/servet-wealth-logo.jpg"
+            alt="Logo"
+            style="max-height: 5rem; border-radius: 50%"
+          />
+        </div>
+        <div id="logo-comp-name">
+          <span style="font-size: 3rem; font-weight: 100">SERVET</span>
+          <br />WEALTH MANAGEMENT
+        </div>
+      </div>
+      <button
+        class="navbar-toggler navbar-burger"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarToggler"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        (click)="sidebarToggle()"
+      >
+        <span class="navbar-toggler-bar"></span>
+        <span class="navbar-toggler-bar"></span>
+        <span class="navbar-toggler-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" (mouseleave)="$event.stopPropagation(); myDrop.close();">
+          <a
+            class="nav-link nav-style"
+            rel="tooltip"
+            data-placement="bottom"
+            [routerLink]="['/']"
+          >Home
+          </a>
+        </li>
+        <li class="nav-item" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
+          <a
+            class="nav-link nav-style"
+            rel="tooltip"
+            data-placement="bottom"
+            [routerLink]="['/about']"
+          >
+            About Us
+          </a>
+        </li>
+        <li style="margin-bottom: 0 !important" class="nav-item" placement="bottom-end" style="cursor: pointer" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
+          <div class="dropdown-show"
+            style="margin-bottom: 0 !important" ngbDropdown #myDrop="ngbDropdown"
+            (mouseenter)="$event.stopPropagation(); myDrop.open()">
+            <a style="margin-bottom: 0 !important" class="nav-link nav-style" [ngClass]="{'mobile': sidebarVisible}"
+              data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false" id="dropdownBasic1" ngbDropdownToggle [routerLink]="['/planningprocess']">
+              Services
             </a>
+            <div
+              style="margin-top: 0 !important; border-radius: 0px !important"
+              #togglingOnHover
+              ngbDropdownMenu
+              aria-labelledby="dropdownBasic1" 
+            >
+              <a ngbDropdownItem [routerLink]="['/planningprocess']" [ngClass]="{'mobile-drop ': sidebarVisible}"
+                >Planning Process</a
+              >
+              <a ngbDropdownItem [routerLink]="['/services']" [ngClass]="{'mobile-drop ': sidebarVisible}">Services</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item" (mouseleave)="$event.stopPropagation(); myDrop.close();">
+          <a
+            class="nav-link nav-style"
+            rel="tooltip"
+            data-placement="bottom"
+            [routerLink]="['/whoweserve']"
+          >
+            Who We Serve
+          </a>
+        </li>
 
-            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-bar"></span>
-                <span class="navbar-toggler-bar"></span>
-                <span class="navbar-toggler-bar"></span>
-            </button>
-        </div>
-        <div class="navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
-                        <i class="fa fa-twitter"></i>Twitter
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
-                        <i class="fa fa-facebook-square"></i>Facebook
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="http://pk2-angular.creative-tim.com/documentation/tutorial" class="nav-link" target="_blank"><i class="nc-icon nc-book-bookmark"></i> Documentation</a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://www.creative-tim.com/product/paper-kit-2-pro-angular?ref=pk2-angular-free-local" target="_blank" class="btn btn-danger btn-round">Upgrade to Pro</a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://github.com/creativetimofficial/paper-kit-2-angular/issues?ref=pk2-free-local" target="_blank" class="nav-link">Have an issue</a>
-                </li>
-            </ul>
-        </div>
+        <li class="nav-item" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
+          <a
+            class="nav-link nav-style"
+            rel="tooltip"
+            data-placement="bottom"
+            [routerLink]="['/blog']"
+          >
+            Blog
+          </a>
+        </li>
+        <li class="nav-item" (mouseleave)="$event.stopPropagation(); myDrop.close();" >
+          <a class="nav-link nav-style" [routerLink]="['/contact']">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="https://wealth.emaplan.com/ent/SignIn?ent%2fema%2flts%2ftriad%2fnathanlee"
+            class="nav-link nav-style"
+            >Client Login</a
+          >
+        </li>
+      </ul>
     </div>
-</nav> -->
-
-
-<nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500">
-    <div class="container">
-        <!-- <a class="navbar-brand" href="#">Transparent</a> -->
-        <a class="navbar-brand" href="https://www.servetwealth.com/" style="margin-left: 5rem;">
-            <img src="assets/img/servet-wealth-logo.jpg" alt="Logo" style="max-height: 5rem;border-radius: 50%;">
-            <span style="color: white;letter-spacing: 2px; margin:10px; font-size: 3rem; font-family: 'Gotham', Trajan, Pro; font-weight: 100;">
-                SERVET
-            </span>
-        </a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-transparent" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-bar"></span>
-            <span class="navbar-toggler-bar"></span>
-            <span class="navbar-toggler-bar"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-transparent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i aria-hidden="true"></i> Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i aria-hidden="true"></i> About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i aria-hidden="true"></i> Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i aria-hidden="true"></i> Resource Center</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i aria-hidden="true"></i> Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+  </div>
 </nav>
-

@@ -1,0 +1,64 @@
+<div *ngIf="blogSpecificPage">
+  <app-blog-header></app-blog-header>
+</div>
+
+<div
+  class="container"
+  [ngClass]="{ limitTextHeight: isReadMore }"
+  [ngStyle]="{ padding: blogSpecificPage ? '3rem' : '' }"
+>
+  <div class="row">
+    <div class="col-md-6 mr-auto ml-auto">
+      <time class="entry-time">{{ blogSixContent.date }}</time>
+      <h4 class="title" style="text-align: left; margin-top: 10px">
+        <a routerLinkActive="active" routerLink="/blog/what-is-inside-spy">{{
+          blogSixContent.title
+        }}</a>
+      </h4>
+    </div>
+    <div class="col-md-6 mr-auto ml-auto"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mr-auto ml-auto" style="text-align: left">
+      <p>{{ blogSixContent.description }}</p>
+      <p>{{ blogSixContent.descriptionSecond }}</p>
+      <p>{{ blogSixContent.descriptionThird }}</p>
+      <p>{{ blogSixContent.descriptionForth }}</p>
+      <img
+        class="img-thumbnail blog-images"
+        [src]="blogSixContent.imageMarketCapitalization"
+        alt="Image of Market Capitalization"
+      />
+      <p>{{ blogSixContent.descriptionFive }}</p>
+      <img
+        class="img-thumbnail blog-images"
+        [src]="blogSixContent.imageStockSector"
+        alt="Image of Stock Sector"
+      />
+      <p>{{ blogSixContent.descriptionSix }}</p>
+      <img
+      class="img-thumbnail blog-images"
+      [src]="blogSixContent.imageBreakdown"
+      alt="Image of Breakdown"
+    />
+    <p>{{ blogSixContent.descriptionSeven }}</p>
+    <p>{{ blogSixContent.descriptionEight }}</p>
+      <p>
+        To learn more about the SPY or any other ETFs and how it can fit into
+        your portfolio, please feel free to contact me at
+        <a
+          class="email-link"
+          style="text-align: center"
+          href="mailto:nathan@servetwealth.com"
+          >nathan@servetwealth.com</a
+        >.
+      </p>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+<div class="container" [hidden]="blogSpecificPage">
+  <button (click)="showText()" class="read-more-button">
+    {{ isReadMore ? "Read More" : "Read Less" }}
+  </button>
+</div>

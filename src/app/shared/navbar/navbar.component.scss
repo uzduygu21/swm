@@ -1,0 +1,32 @@
+.box {
+        display: flex;
+        align-items: center;
+    }
+
+#logo-comp-name {
+    color: #032f60; 
+    margin-left:10px;
+    letter-spacing: 2px;
+    font-family: 'Gotham', Trajan, Pro;
+    line-height: 1 !important;
+}
+
+.nav-style {
+    font-family: Gotham, Trajan, Pro;
+    // color: #032f60 !important; 
+}
+
+.mobile {
+    color: #9A9A9A !important;
+    margin: 0px 0px !important;
+    padding: 15px 0 !important;
+    text-transform: uppercase;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    line-height: 1.5em !important;
+}
+
+.mobile-drop {
+    background-color: white;
+}
+

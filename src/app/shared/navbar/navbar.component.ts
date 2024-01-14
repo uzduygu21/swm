@@ -1,5 +1,6 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-navbar',
@@ -7,8 +8,11 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  isMenuCollapsed = true;
+  collapsed = true;
   private toggleButton: any;
-  private sidebarVisible: boolean;
+  public sidebarVisible: boolean;
+  @ViewChild('togglingOnHover') togglingOnHover!: ElementRef;
 
   constructor(public location: Location, private element : ElementRef) {
     this.sidebarVisible = false;
@@ -18,6 +22,12 @@ export class NavbarComponent {
     const navbar: HTMLElement = this.element.nativeElement;
     this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
 }
+
+onHover(event: any) {
+console.log("HOVERED", event)
+
+}
+
 sidebarOpen() {
   const toggleButton = this.toggleButton;
   const html = document.getElementsByTagName('html')[0];
@@ -47,28 +57,5 @@ sidebarToggle() {
       this.sidebarClose();
   }
 };
-isHome() {
-var titlee = this.location.prepareExternalUrl(this.location.path());
-if(titlee.charAt(0) === '#'){
-    titlee = titlee.slice( 1 );
-}
-  if( titlee === '/home' ) {
-      return true;
-  }
-  else {
-      return false;
-  }
-}
-isDocumentation() {
-var titlee = this.location.prepareExternalUrl(this.location.path());
-if(titlee.charAt(0) === '#'){
-    titlee = titlee.slice( 1 );
-}
-  if( titlee === '/documentation' ) {
-      return true;
-  }
-  else {
-      return false;
-  }
-}
+
 }
