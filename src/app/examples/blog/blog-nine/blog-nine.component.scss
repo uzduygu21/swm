@@ -1,1 +1,6 @@
-@import '../shared/blog-styles'
+@import '../shared/blog-styles';
+
+.limitTextHeightNine {
+    height: 13em;
+    overflow: hidden;
+  }
