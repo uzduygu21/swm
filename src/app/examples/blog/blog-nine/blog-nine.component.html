@@ -1,0 +1,49 @@
+<div *ngIf="blogSpecificPage">
+    <app-blog-header></app-blog-header>
+  </div>
+  <div
+    class="container"
+    [ngClass]="{ limitTextHeight: isReadMore }"
+    [ngStyle]="{ padding: blogSpecificPage ? '3rem' : '' }"
+  >
+    <div class="row">
+      <div class="col-md-6 mr-auto ml-auto">
+        <time class="entry-time">{{ blogNineContent.date }}</time>
+        <h4 class="title" style="text-align: left; margin-top: 10px">
+          <a routerLinkActive="active" routerLink="/blog/2024-market-strategy">
+            {{ blogNineContent.title }}
+          </a>
+        </h4>
+      </div>
+      <div class="col-md-6 mr-auto ml-auto"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 mr-auto ml-auto" style="text-align: left">
+        <p>{{ blogNineContent.description }}</p>
+        <p>{{ blogNineContent.secondParagraph }}</p>
+        <ul>
+          <li *ngFor="let blogListItem of blogNineContent.listOne; index as i">
+            <h6 class="item-headers">{{ blogListItem.listHeader }}</h6>
+            <p [innerHTML]="blogListItem.listDescription"></p>
+          </li>
+        </ul>
+        <p>{{ blogNineContent.thirdParagraph }}</p>
+        <ul>
+          <li *ngFor="let blogListItem of blogNineContent.listTwo; index as i">
+            <h6 class="item-headers">{{ blogListItem.listHeader }}</h6>
+            <p [innerHTML]="blogListItem.listDescription"></p>
+          </li>
+        </ul>
+        <p>{{ blogNineContent.forthParagraph }}</p>
+        <p>{{ blogNineContent.fifthParagraph }}</p>
+
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+  <div class="container" [hidden]="blogSpecificPage">
+    <button (click)="showText()" class="read-more-button">
+      {{ isReadMore ? "Read More" : "Read Less" }}
+    </button>
+  </div>
+  
