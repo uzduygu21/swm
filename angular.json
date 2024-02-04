@@ -20,6 +20,12 @@
             "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "rewrites": [
+      {
+        "source": "/robots.txt",
+        "destination": "/robots.txt"
+      }
+    ],
             "polyfills": [
               "zone.js"
             ],
