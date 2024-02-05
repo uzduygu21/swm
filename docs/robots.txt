@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+
+# Allow crawling of all other content
+Allow: /
+
+# Sitemap location
+Sitemap: https://servetwealth.com/sitemap.xml
