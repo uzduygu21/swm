@@ -17,6 +17,7 @@ import { BlogSevenComponent } from './examples/blog/blog-seven/blog-seven.compon
 import { BlogEightComponent } from './examples/blog/blog-eight/blog-eight.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { BlogNineComponent } from './examples/blog/blog-nine/blog-nine.component';
+import { BlogTenComponent } from './examples/blog/blog-ten/blog-ten.component';
 
 
 const routes: Routes = [
@@ -36,7 +37,8 @@ const routes: Routes = [
     { path: 'what-is-inside-spy',  component: BlogSixComponent },
     { path: 'ibonds-2021', component: BlogSevenComponent },
     { path: 'donor-advised-fund', component: BlogEightComponent },
-    { path: '2024-market-strategy', component: BlogNineComponent }
+    { path: '2024-market-strategy', component: BlogNineComponent },
+    { path: 'life-insurance', component: BlogTenComponent }
   ]
  },
   { path: 'contact',  component: ContactComponent },

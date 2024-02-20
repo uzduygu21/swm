@@ -8,7 +8,6 @@ import { ServicesComponent } from './services/services.component';
 import { PlanningProcessComponent } from './planning-process/planning-process.component';
 import { HomeComponent } from './home/home.component';
 
-
 @NgModule({
   declarations: [
     AboutComponent,
