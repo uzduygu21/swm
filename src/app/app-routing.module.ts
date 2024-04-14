@@ -21,11 +21,11 @@ import { BlogTenComponent } from './examples/blog/blog-ten/blog-ten.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about',  component: AboutComponent },
-  { path: 'whoweserve', component: WhoWeServeComponent },
-  { path: 'services', component: ServicesComponent},
-  { path: 'planningprocess', component: PlanningProcessComponent },
+  { path: '', title: 'Servet Wealth Management - Home', component: HomeComponent },
+  { path: 'about', title: 'Servet Wealth Management - About Us', component: AboutComponent },
+  { path: 'whoweserve', title: 'Servet Wealth Management - Who We Serve', component: WhoWeServeComponent },
+  { path: 'services', title: 'Servet Wealth Management - Services', component: ServicesComponent},
+  { path: 'planningprocess', title: 'Servet Wealth Management - Planning Process', component: PlanningProcessComponent },
   { path: 'blog', title: 'Servet Wealth Management - Blog', 
   children: [
     { path: '', component: BlogComponent},
@@ -41,7 +41,7 @@ const routes: Routes = [
     { path: 'life-insurance', component: BlogTenComponent }
   ]
  },
-  { path: 'contact',  component: ContactComponent },
+  { path: 'contact', title: 'Servet Wealth Management - Contact', component: ContactComponent },
   { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
 
