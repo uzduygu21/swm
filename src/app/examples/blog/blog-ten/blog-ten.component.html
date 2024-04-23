@@ -2,7 +2,7 @@
     <app-blog-header></app-blog-header>
   </div>
   
-  <div class="container" [ngClass]="{ limitTextHeight: isReadMore }"
+  <div class="container" [ngClass]="{ limitTextHeightTen: isReadMore }"
   [ngStyle]="{'padding': blogSpecificPage ? '3rem' : ''}">
     <div class="row">
       <div class="col-md-6 mr-auto ml-auto">
@@ -15,23 +15,20 @@
     </div>
     <div class="row">
       <div class="col-md-8 mr-auto ml-auto" style="text-align: left">
-        <p>{{ blogTenContent.description }}</p>
-        <p>{{ blogTenContent.descriptionSecondPrg }}</p>
-        <p> {{ blogTenContent.hereisWhat }}</p>
-        <h6 class="item-headers">{{ blogTenContent.headerOne }}</h6>
-        <p>{{ blogTenContent.descriptionHeaderOne }}</p>
-        <h6 class="item-headers">{{ blogTenContent.headerTwo }}</h6>
-        <p>{{ blogTenContent.descriptionHeaderTwo }}</p>
-        <h6 class="item-headers">{{ blogTenContent.headerThree }}</h6>
-        <p>{{ blogTenContent.descriptionHeaderThree }}</p>
-        <h6 class="item-headers">{{ blogTenContent.headerFour }}</h6>
-        <p>{{ blogTenContent.descriptionheaderFour }}</p>
-        <ul>
-            <li *ngFor="let blogListItem of blogTenContent.listOne; index as i">
-              <h6 class="item-headers">{{ blogListItem.listHeader }}</h6>
-              <p [innerHTML]="blogListItem.listDescription"></p>
-            </li>
-          </ul>
+        <ng-container *ngFor="let prg of blogTenContent.paragraphs">
+          <section>
+            <p>
+              {{prg.paragraph}}
+            </p>
+          </section>
+        </ng-container>
+
+        <ng-container *ngFor="let section of blogTenContent.sections">
+          <section>
+            <h6 style="text-decoration: underline;">{{ section.title }}</h6>
+            <p *ngFor="let item of section.items" [innerHTML]="item | boldKeyword"></p>
+          </section>
+        </ng-container>
       </div>
       <div class="col-md-4"></div>
     </div>
