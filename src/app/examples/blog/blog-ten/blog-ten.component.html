@@ -17,7 +17,7 @@
       <div class="col-md-8 mr-auto ml-auto" style="text-align: left">
         <ng-container *ngFor="let prg of blogTenContent.paragraphs">
           <section>
-            <p>
+            <p class="prg-spaces">
               {{prg.paragraph}}
             </p>
           </section>
@@ -26,7 +26,7 @@
         <ng-container *ngFor="let section of blogTenContent.sections">
           <section>
             <h6 style="text-decoration: underline;">{{ section.title }}</h6>
-            <p *ngFor="let item of section.items" [innerHTML]="item | boldKeyword"></p>
+            <p class="prg-spaces" *ngFor="let item of section.items" [innerHTML]="item | boldKeyword"></p>
           </section>
         </ng-container>
       </div>
