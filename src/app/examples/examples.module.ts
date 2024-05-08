@@ -14,7 +14,7 @@ import { HomeComponent } from './home/home.component';
     WhoWeServeComponent,
     ServicesComponent,
     PlanningProcessComponent,
-    HomeComponent
+    HomeComponent,
     ],
   imports: [
     CommonModule,

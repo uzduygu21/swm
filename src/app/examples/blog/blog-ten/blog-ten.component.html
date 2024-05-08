@@ -1,41 +1,49 @@
-<div *ngIf= 'blogSpecificPage'>
-    <app-blog-header></app-blog-header>
-  </div>
-  
-  <div class="container" [ngClass]="{ limitTextHeightTen: isReadMore }"
-  [ngStyle]="{'padding': blogSpecificPage ? '3rem' : ''}">
-    <div class="row">
-      <div class="col-md-6 mr-auto ml-auto">
-        <time class="entry-time">{{ blogTenContent.date }}</time>
-        <h1 class="title" style="text-align: left; margin-top: 10px">
-          <a routerLinkActive="active" routerLink="/blog/life-insurance">{{ blogTenContent.title }}</a>
-        </h1>
-      </div>
-      <div class="col-md-6 mr-auto ml-auto"></div>
-    </div>
-    <div class="row">
-      <div class="col-md-8 mr-auto ml-auto" style="text-align: left">
-        <ng-container *ngFor="let prg of blogTenContent.paragraphs">
-          <section>
-            <p class="prg-spaces">
-              {{prg.paragraph}}
-            </p>
-          </section>
-        </ng-container>
+<div *ngIf="blogSpecificPage">
+  <app-blog-header></app-blog-header>
+</div>
 
-        <ng-container *ngFor="let section of blogTenContent.sections">
-          <section>
-            <h6 style="text-decoration: underline;">{{ section.title }}</h6>
-            <p class="prg-spaces" *ngFor="let item of section.items" [innerHTML]="item | boldKeyword"></p>
-          </section>
-        </ng-container>
-      </div>
-      <div class="col-md-4"></div>
+<div
+  class="container"
+  [ngClass]="{ limitTextHeightTen: isReadMore }"
+  [ngStyle]="{ padding: blogSpecificPage ? '3rem' : '' }"
+>
+  <div class="row">
+    <div class="col-md-6 mr-auto ml-auto">
+      <time class="entry-time">{{ blogTenContent.date }}</time>
+      <h1 class="title" style="text-align: left; margin-top: 10px">
+        <a routerLinkActive="active" routerLink="/blog/life-insurance">{{
+          blogTenContent.title
+        }}</a>
+      </h1>
     </div>
+    <div class="col-md-6 mr-auto ml-auto"></div>
   </div>
-  <div class="container" [hidden]="blogSpecificPage">
-    <button (click)="showText()" class="read-more-button" >
-      {{ isReadMore ? "Read More" : "Read Less" }}
-    </button>
+  <div class="row">
+    <div class="col-md-8 mr-auto ml-auto" style="text-align: left">
+      <ng-container *ngFor="let prg of blogTenContent.paragraphs">
+        <section>
+          <p class="prg-spaces">
+            {{ prg.paragraph }}
+          </p>
+        </section>
+      </ng-container>
+
+      <ng-container *ngFor="let section of blogTenContent.sections">
+        <section>
+          <h6 style="text-decoration: underline">{{ section.title }}</h6>
+          <p
+            class="prg-spaces"
+            *ngFor="let item of section.items"
+            [innerHTML]="item | boldKeyword"
+          ></p>
+        </section>
+      </ng-container>
+    </div>
+    <div class="col-md-4"></div>
   </div>
-  
+</div>
+<div class="container" [hidden]="blogSpecificPage">
+  <button (click)="showText()" class="read-more-button">
+    {{ isReadMore ? "Read More" : "Read Less" }}
+  </button>
+</div>

@@ -1,0 +1,50 @@
+<div *ngIf="blogSpecificPage">
+    <app-blog-header></app-blog-header>
+  </div>
+  
+  <div
+    class="container"
+    [ngClass]="{ limitTextHeightTen: isReadMore }"
+    [ngStyle]="{ padding: blogSpecificPage ? '3rem' : '' }"
+  >
+    <div class="row">
+      <div class="col-md-6 mr-auto ml-auto">
+        <time class="entry-time">{{ blogContent.date }}</time>
+        <h1 class="title" style="text-align: left; margin-top: 10px">
+          <a routerLinkActive="active" routerLink="/blog/high-net-worth-estate-planning">{{
+            blogContent.title
+          }}</a>
+        </h1>
+      </div>
+      <div class="col-md-6 mr-auto ml-auto"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 mr-auto ml-auto" style="text-align: left">
+        <ng-container *ngFor="let prg of blogContent.paragraphs">
+          <section>
+            <p class="prg-spaces">
+              {{ prg.paragraph }}
+            </p>
+          </section>
+        </ng-container>
+  
+        <ng-container *ngFor="let section of blogContent.sections">
+          <section>
+            <h4>{{ section.title }}</h4>
+            <p
+              class="prg-spaces"
+              *ngFor="let item of section.items"
+              [innerHTML]="item"
+            ></p>
+          </section>
+        </ng-container>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+  <div class="container" [hidden]="blogSpecificPage">
+    <button (click)="showText()" class="read-more-button">
+      {{ isReadMore ? "Read More" : "Read Less" }}
+    </button>
+  </div>
+  

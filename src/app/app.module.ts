@@ -25,6 +25,7 @@ import { BlogTenComponent } from './examples/blog/blog-ten/blog-ten.component';
 import { TruncatePipe } from './examples/blog/truncate.pipe';
 import { BlogHeaderComponent } from './examples/blog/blog-header/blog-header.component';
 import { BoldKeywordPipe } from './examples/blog/bold-keyword.pipe';
+import { BlogElevenComponent } from './examples/blog/blog-eleven/blog-eleven.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { BoldKeywordPipe } from './examples/blog/bold-keyword.pipe';
     BlogEightComponent,
     BlogNineComponent,
     BlogTenComponent,
+    BlogElevenComponent,
     TruncatePipe,
     BlogHeaderComponent,
     BoldKeywordPipe
