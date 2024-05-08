@@ -1,0 +1,204 @@
+<div *ngIf="blogSpecificPage">
+  <app-blog-header></app-blog-header>
+</div>
+
+<div
+  class="container"
+  [ngClass]="{ limitTextHeightTen: isReadMore }"
+  [ngStyle]="{ padding: blogSpecificPage ? '3rem' : '' }"
+>
+  <div class="row">
+    <div class="col-md-6 mr-auto ml-auto">
+      <time class="entry-time">{{ blogContent.date }}</time>
+      <h1 class="title" style="text-align: left; margin-top: 10px">
+        <a
+          routerLinkActive="active"
+          routerLink="/blog/high-net-worth-estate-planning"
+          >{{ blogContent.title }}</a
+        >
+      </h1>
+    </div>
+    <div class="col-md-6 mr-auto ml-auto"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mr-auto ml-auto" style="text-align: left">
+      <ng-container *ngFor="let prg of blogContent.paragraphs">
+        <section>
+          <p class="prg-spaces">
+            {{ prg.paragraph }}
+          </p>
+        </section>
+      </ng-container>
+
+      <ng-container *ngFor="let section of blogContent.sections">
+        <section>
+          <h4 class="prg-spaces">{{ section.title }}</h4>
+          <ng-container *ngFor="let item of section.items">
+            <ng-container *ngIf="isSubItem(item)">
+              <h5 class="prg-spaces">{{ item.subTitle }}</h5>
+
+              <p class="prg-spaces" *ngFor="let subItem of item.subItems">
+                {{ subItem }}
+              </p>
+            </ng-container>
+            <ng-container *ngIf="!isSubItem(item)">
+              <p class="prg-spaces">{{ item }}</p>
+            </ng-container>
+          </ng-container>
+        </section>
+      </ng-container>
+
+      <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Taxable amount above the exemption limit</th>
+              <th>Tax rate</th>
+              <th>Tax owed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>$0 — $10,000</td>
+              <td>18%</td>
+              <td>18% of the taxable amount</td>
+            </tr>
+            <tr>
+              <td>$10,000 — $20,000</td>
+              <td>20%</td>
+              <td>$1,800 plus 20% of the amount over $10,000 up to $20,000</td>
+            </tr>
+            <tr>
+              <td>$20,000 — $40,000</td>
+              <td>22%</td>
+              <td>$3,800 plus 22% of the amount over $20,000 up to $40,000</td>
+            </tr>
+            <tr>
+              <td>$40,000 — $60,000</td>
+              <td>24%</td>
+              <td>$8,200 plus 24% of the amount over $40,000 up to $60,000</td>
+            </tr>
+            <tr>
+              <td>$60,000 — $80,000</td>
+              <td>26%</td>
+              <td>$13,000 plus 26% of the amount over $60,000 up to $80,000</td>
+            </tr>
+            <tr>
+              <td>$80,000 — $100,000</td>
+              <td>28%</td>
+              <td>
+                $18,200 plus 28% of the amount over $80,000 up to $100,000
+              </td>
+            </tr>
+            <tr>
+              <td>$100,000 — $150,000</td>
+              <td>30%</td>
+              <td>
+                $23,800 plus 30% of the amount over $100,000 up to $150,000
+              </td>
+            </tr>
+            <tr>
+              <td>$150,000 — $250,000</td>
+              <td>32%</td>
+              <td>
+                $38,800 plus 32% of the amount over $150,000 up to $250,000
+              </td>
+            </tr>
+            <tr>
+              <td>$250,000 — $500,000</td>
+              <td>34%</td>
+              <td>
+                $70,800 plus 34% of the amount over $250,000 up to $500,000
+              </td>
+            </tr>
+            <tr>
+              <td>$500,000 — $750,000</td>
+              <td>37%</td>
+              <td>
+                $155,800 plus 37% of the amount over $500,000 up to $750,000
+              </td>
+            </tr>
+            <tr>
+              <td>$750,000 — $1,000,000</td>
+              <td>39%</td>
+              <td>
+                $248,300 plus 39% of the amount over $750,000 up to $1,000,000
+              </td>
+            </tr>
+            <tr>
+              <td>$1,000,000+</td>
+              <td>40%</td>
+              <td>$345,800 plus 40% of the amount over $1,000,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Tax rates sourced from the
+        <a
+          class="link-underline"
+          target="_blank"
+          href="www.irs.gov/instructions/i706"
+          >Internal Revenue Service</a
+        >
+      </p>
+      <div>
+        <h4 class="prg-spaces">
+          What Is the Path Forward for High-Net-Worth and Ultra-High-Net-Worth
+          Estates?
+        </h4>
+        <p class="prg-spaces">
+          Reductions to the current estate tax exemptions will undoubtedly have
+          an impact on the tax liabilities for future inheritors. Fortunately,
+          there are solutions and strategies you can implement before the
+          expiration of current estate tax exemption limits. 
+        </p>
+        <p class="prg-spaces">
+          Below are six estate planning options available to many high-net-worth
+          and ultra-high-net-worth families that may help to mitigate estate
+          taxes:
+        </p>
+        <ol style="margin-left: 2rem">
+          <li>Lock in the current gift tax exemption</li>
+          <li>Structure family businesses strategically</li>
+          <li>Establish an Irrevocable Life Insurance Trust </li>
+          <li>Establish a Qualified Personal Residence Trust</li>
+          <li>Establish a Grantor Retained Annuity Trust</li>
+          <li>Accelerate your gift to a 529 account</li>
+        </ol>
+        <ng-container *ngFor="let section of blogContentSecond.sections">
+          <section>
+            <h5 class="prg-spaces">{{ section.title }}</h5>
+            <p
+              class="prg-spaces"
+              *ngFor="let item of section.items"
+              [innerHTML]="item"
+            ></p>
+          </section>
+        </ng-container>
+        <h4 class="prg-spaces">
+            The Bottom Line: Estate Planning Is More Important than Ever for High-Net-Worth and Ultra-High-Net-Worth Households
+        </h4>
+        <p class="prg-spaces">
+            The truth is, your estate planning strategies can be as simple or complex as you want or need them to be.
+        </p>
+        <p class="prg-spaces"> 
+            While the sunsetting of current estate tax exclusion limits is certainly unfortunate for high-net-worth families, there are options available to reduce the impact of estate taxes on your heirs and beneficiaries.
+        </p>
+        <p class="prg-spaces">
+            At Servet Wealth Management, we pride ourselves on helping our clients make sense of the financial complexities they’re facing amidst changing — and often unpredictable — legislation. 
+        </p>
+        <p class="prg-spaces">
+            To get valuable financial strategies like those discussed here delivered directly to your inbox, sign up for our newsletter or 
+            <a class="link-underline" href="https://www.linkedin.com/in/nathan-lee-cfp/">connect with me on LinkedIn</a>.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+<div class="container" [hidden]="blogSpecificPage">
+  <button (click)="showText()" class="read-more-button">
+    {{ isReadMore ? "Read More" : "Read Less" }}
+  </button>
+</div>

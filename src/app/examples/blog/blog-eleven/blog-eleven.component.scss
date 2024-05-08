@@ -1,0 +1,14 @@
+@import '../shared/blog-styles';
+
+.limitTextHeightTen {
+    height: 13em;
+    overflow: hidden;
+  }
+
+.prg-spaces {
+  margin-bottom: 1.5rem;
+}
+
+.link-underline {
+  text-decoration: underline;
+}

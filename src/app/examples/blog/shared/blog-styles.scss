@@ -1,5 +1,5 @@
 .title {
-  font-size: 1.7em;
+  font-size: 1.7rem;
 }
 
 .email-link {
@@ -25,7 +25,11 @@
 }
 
 p {
-  font-size: 1em;
+  font-size: 1rem;
+}
+
+li {
+  font-size: 1rem;
 }
 
 .entry-time {
@@ -37,4 +41,13 @@ p {
   color: #023047;
   text-align: left;
   font-style: italic;
+}
+
+h1, h2, h3, h5, h4, h6 {
+  // font-family: Trebuchet MS;
+  font-weight: 300;
+}
+
+body {
+  color: black;
 }
