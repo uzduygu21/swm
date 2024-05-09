@@ -44,6 +44,7 @@ export class BlogElevenComponent implements OnInit {
           {
             subTitle: 'Avoiding probate',
             subItems: [
+              "There are two easy ways to avoid probate.  The first is to make sure you have the correct designations on your retirement accounts and creating transfer on death (TOD) and payable on death (POD) on your regular brokerage and bank accounts.  The other way is to setup a trust which can give your heirs more protection in the long term.",
               "Families with an estate of any size can benefit from estate planning for the simple reason of avoiding probate (depending on the state you live in). You’ve probably heard it before, but probate is such an onerous process that it bears repeating. In the state of New York, probate can take up to two years or more depending on the value and complexity of the estate.",
               "Probate also exposes the entirety of the estate to prying eyes. Since the court system is open, an estate that passes through probate becomes accessible to the public, allowing any interested party to examine the details of your estate. This includes your nosy neighbors, creditors, and even financial predators.",
               "One final note on probate: Having a simple will does not avoid probate. While a will makes it easier to pass the assets through to the beneficiaries upon completion of the probate process, it does not prevent an estate from being subject to the court system. More sophisticated estate planning tools are required to avoid the probate process entirely. ",
