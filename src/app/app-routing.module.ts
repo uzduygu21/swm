@@ -19,6 +19,7 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { BlogNineComponent } from './examples/blog/blog-nine/blog-nine.component';
 import { BlogTenComponent } from './examples/blog/blog-ten/blog-ten.component';
 import { BlogElevenComponent } from './examples/blog/blog-eleven/blog-eleven.component';
+import { BlogTwelveComponent } from './examples/blog/blog-twelve/blog-twelve.component';
 
 
 const routes: Routes = [
@@ -40,7 +41,8 @@ const routes: Routes = [
     { path: 'donor-advised-fund', component: BlogEightComponent },
     { path: '2024-market-strategy', component: BlogNineComponent },
     { path: 'life-insurance', component: BlogTenComponent },
-    { path: 'high-net-worth-estate-planning', component: BlogElevenComponent }
+    { path: 'high-net-worth-estate-planning', component: BlogElevenComponent },
+    { path: 'nj-inheritance-tax', component: BlogTwelveComponent }
   ]
  },
   { path: 'contact', title: 'Servet Wealth Management - Contact', component: ContactComponent },
