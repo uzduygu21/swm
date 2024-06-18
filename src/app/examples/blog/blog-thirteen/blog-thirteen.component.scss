@@ -1,0 +1,10 @@
+@import '../shared/blog-styles';
+
+.limitTextHeightTen {
+    height: 12rem;
+    overflow: hidden;
+  }
+
+p, h6, h5, h4 {
+    margin-bottom: 1.5rem;
+  }

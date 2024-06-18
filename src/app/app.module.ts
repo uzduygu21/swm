@@ -27,6 +27,7 @@ import { BlogHeaderComponent } from './examples/blog/blog-header/blog-header.com
 import { BoldKeywordPipe } from './examples/blog/bold-keyword.pipe';
 import { BlogElevenComponent } from './examples/blog/blog-eleven/blog-eleven.component';
 import { BlogTwelveComponent } from './examples/blog/blog-twelve/blog-twelve.component';
+import { BlogThirteenComponent } from './examples/blog/blog-thirteen/blog-thirteen.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { BlogTwelveComponent } from './examples/blog/blog-twelve/blog-twelve.com
     BlogTenComponent,
     BlogElevenComponent,
     BlogTwelveComponent,
+    BlogThirteenComponent,
     TruncatePipe,
     BlogHeaderComponent,
     BoldKeywordPipe
